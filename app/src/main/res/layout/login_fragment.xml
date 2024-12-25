@@ -1,34 +1,114 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.core.widget.NestedScrollView
+<androidx.constraintlayout.widget.ConstraintLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".FirstFragment">
-    <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:padding="16dp">
-        <Button
-                android:id="@+id/button_first"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/next"
-                app:layout_constraintBottom_toTopOf="@id/textview_first"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"/>
+        android:background="@android:color/holo_blue_light">
 
-        <TextView
-                android:id="@+id/textview_first"
+    <!-- Circular ImageView -->
+    <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/circular_image_view"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="40dp"
+            android:contentDescription="logo_icon"
+            android:src="@drawable/cross_talk_logo"
+            android:background="@drawable/circle_background"
+            app:shapeAppearanceOverlay="@style/circle"
+            android:scaleType="centerCrop"
+            android:padding="4dp"
+            android:clipToOutline="true"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+
+
+
+    <EditText
+            android:id="@+id/email_input"
+            android:layout_width="300dp"
+            android:layout_height="48dp"
+            android:hint="add text"
+            android:autofillHints="emailAddress"
+            android:textColorHint="@color/white"
+            android:textColor="@color/white"
+            android:inputType="textEmailSubject"
+            android:background="@drawable/border_white"
+            android:padding="8dp"
+            android:layout_marginTop="60dp"
+            style="@style/login_text"
+            app:layout_constraintTop_toBottomOf="@id/circular_image_view"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    <EditText
+            android:id="@+id/password_input"
+            android:layout_width="300dp"
+            android:layout_height="48dp"
+            android:hint="add text"
+            android:textColorHint="@color/white"
+            android:textColor="@color/white"
+            android:autofillHints="password"
+            android:inputType="textPassword"
+            android:background="@drawable/border_white"
+            android:padding="8dp"
+            android:layout_marginTop="40dp"
+            style="@style/login_text"
+            app:layout_constraintTop_toBottomOf="@id/email_input"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/button_split"
+            app:layout_constraintTop_toBottomOf="@id/password_input"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="60dp">
+
+        <com.google.android.material.button.MaterialButton
+                android:id="@+id/login_button"
+                style="?android:attr/borderlessButtonStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:text="@string/lorem_ipsum"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/button_first"/>
-    </androidx.constraintlayout.widget.ConstraintLayout>
-</androidx.core.widget.NestedScrollView>
+                android:text="add text"
+                android:textColor="@color/white"
+                android:backgroundTint="@android:color/transparent"
+                android:layout_margin="0dp"
+                android:shadowColor="#000000"
+                android:shadowDx="0"
+                android:shadowDy="0"
+                android:shadowRadius="2"
+                app:cornerRadius="0dp" />
+
+        <View
+                android:layout_width="2dp"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_margin="0dp"
+                android:padding="0dp" />
+
+        <com.google.android.material.button.MaterialButton
+                android:id="@+id/signup_button"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="add text"
+                android:textColor="@color/white"
+                android:backgroundTint="@android:color/transparent"
+                android:layout_margin="0dp"
+                android:shadowColor="#000000"
+                android:shadowDx="0"
+                android:shadowDy="0"
+                android:shadowRadius="2"
+                app:cornerRadius="0dp" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
