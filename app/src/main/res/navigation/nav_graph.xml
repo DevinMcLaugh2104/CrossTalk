@@ -15,7 +15,7 @@
                 android:id="@+id/action_FirstFragment_to_SecondFragment"
                 app:destination="@id/SignUpFragment"/>
         <action android:id="@+id/action_FirstFragment_to_MainFragment"
-                app:destination="@id/MainFragment"/>
+                app:destination="@id/HomeFragment"/>
     </fragment>
     <fragment
             android:id="@+id/SignUpFragment"
@@ -28,10 +28,17 @@
                 app:destination="@id/LoginFragment"/>
     </fragment>
     <fragment
-            android:id="@+id/MainFragment"
+            android:id="@+id/HomeFragment"
             android:name="com.example.crosstalk.Home"
-            android:label="@string/second_fragment_label"
+            android:label="home_fragment_label"
             tools:layout="@layout/home_fragment">
+
+    </fragment>
+    <fragment
+            android:id="@+id/ProfileFragment"
+            android:name="com.example.crosstalk.Profile"
+            android:label="profile_fragment_label"
+            tools:layout="@layout/profile_fragment">
 
     </fragment>
 </navigation>
