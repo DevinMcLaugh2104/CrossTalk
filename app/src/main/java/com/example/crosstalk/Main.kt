@@ -5,13 +5,12 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.navigation.fragment.findNavController
-import com.example.crosstalk.databinding.LoginFragmentBinding
+import com.example.crosstalk.databinding.MainFragmentBinding
 
 
-class Login : Fragment() {
+class Main : Fragment() {
 
-    private var _binding: LoginFragmentBinding? = null
+    private var _binding: MainFragmentBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -19,7 +18,7 @@ class Login : Fragment() {
         savedInstanceState: Bundle?
     ): View {
 
-        _binding = LoginFragmentBinding.inflate(inflater, container, false)
+        _binding = MainFragmentBinding.inflate(inflater, container, false)
         return binding.root
 
     }
@@ -27,15 +26,10 @@ class Login : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.loginButton.setOnClickListener {
-            findNavController().navigate(R.id.action_FirstFragment_to_MainFragment)
-        }
 
-        binding.signupButton.setOnClickListener {
-            findNavController().navigate(R.id.action_FirstFragment_to_SecondFragment)
-        }
 
     }
+
 
     override fun onDestroyView() {
         super.onDestroyView()
