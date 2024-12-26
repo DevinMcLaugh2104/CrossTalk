@@ -5,12 +5,12 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.crosstalk.databinding.MainFragmentBinding
+import com.example.crosstalk.databinding.HomeFragmentBinding
 
 
-class Main : Fragment() {
+class Home : Fragment() {
 
-    private var _binding: MainFragmentBinding? = null
+    private var _binding: HomeFragmentBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -18,7 +18,7 @@ class Main : Fragment() {
         savedInstanceState: Bundle?
     ): View {
 
-        _binding = MainFragmentBinding.inflate(inflater, container, false)
+        _binding = HomeFragmentBinding.inflate(inflater, container, false)
         return binding.root
 
     }
