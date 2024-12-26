@@ -6,5 +6,15 @@
     <string name="second_fragment_label">Sign up Fragment</string>
     <string name="next">Next</string>
     <string name="previous">Previous</string>
-
+    <!-- Login text -->
+    <string name="logo_text">logo text</string>
+    <string name="enter_username">Enter your username</string>
+    <string name="enter_password">Enter your password</string>
+    <string name="login_button">Login</string>
+    <string name="signup_button">Sign up</string>
+    <!-- Sign up text -->
+    <string name="back_button_text">back button</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="enter_full_name">Enter your full name</string>
+    <string name="reenter_password">Reenter your password</string>
 </resources>

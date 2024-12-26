@@ -1,18 +1,16 @@
 <androidx.constraintlayout.widget.ConstraintLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@android:color/holo_blue_light">
 
-    <!-- Circular ImageView -->
     <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/circular_image_view"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_marginTop="40dp"
-            android:contentDescription="logo_icon"
+            android:contentDescription="@string/logo_text"
             android:src="@drawable/cross_talk_logo"
             android:background="@drawable/circle_background"
             app:shapeAppearanceOverlay="@style/circle"
@@ -23,14 +21,11 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />
 
-
-
-
     <EditText
             android:id="@+id/email_input"
             android:layout_width="300dp"
             android:layout_height="48dp"
-            android:hint="add text"
+            android:hint="@string/enter_username"
             android:autofillHints="emailAddress"
             android:textColorHint="@color/white"
             android:textColor="@color/white"
@@ -47,7 +42,7 @@
             android:id="@+id/password_input"
             android:layout_width="300dp"
             android:layout_height="48dp"
-            android:hint="add text"
+            android:hint="@string/enter_password"
             android:textColorHint="@color/white"
             android:textColor="@color/white"
             android:autofillHints="password"
@@ -75,7 +70,7 @@
                 style="?android:attr/borderlessButtonStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="add text"
+                android:text="@string/login_button"
                 android:textColor="@color/white"
                 android:backgroundTint="@android:color/transparent"
                 android:layout_margin="0dp"
@@ -99,7 +94,7 @@
                 style="?android:attr/borderlessButtonStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="add text"
+                android:text="@string/signup_button"
                 android:textColor="@color/white"
                 android:backgroundTint="@android:color/transparent"
                 android:layout_margin="0dp"
@@ -110,5 +105,4 @@
                 app:cornerRadius="0dp" />
 
     </LinearLayout>
-
 </androidx.constraintlayout.widget.ConstraintLayout>

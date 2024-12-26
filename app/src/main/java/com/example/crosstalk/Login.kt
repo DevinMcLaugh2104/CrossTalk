@@ -8,9 +8,7 @@ import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.example.crosstalk.databinding.LoginFragmentBinding
 
-/**
- * A simple [Fragment] subclass as the default destination in the navigation.
- */
+
 class Login : Fragment() {
 
     private var _binding: LoginFragmentBinding? = null
