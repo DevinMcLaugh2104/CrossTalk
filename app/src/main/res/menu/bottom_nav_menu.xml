@@ -3,16 +3,16 @@
     <item
             android:id="@+id/nav_home"
             android:icon="@drawable/cross_talk_logo"
-            android:title="Home" />
+            android:title="@string/home" />
 
     <item
             android:id="@+id/nav_search"
             android:icon="@drawable/cross_talk_logo"
-            android:title="Search" />
+            android:title="@string/search" />
 
     <item
             android:id="@+id/nav_profile"
             android:icon="@drawable/cross_talk_logo"
-            android:title="Profile" />
+            android:title="@string/profile" />
 
 </menu>

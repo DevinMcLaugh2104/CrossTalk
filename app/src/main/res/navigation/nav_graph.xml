@@ -30,14 +30,14 @@
     <fragment
             android:id="@+id/HomeFragment"
             android:name="com.example.crosstalk.Home"
-            android:label="home_fragment_label"
+            android:label="@string/home_fragment"
             tools:layout="@layout/home_fragment">
 
     </fragment>
     <fragment
             android:id="@+id/ProfileFragment"
             android:name="com.example.crosstalk.Profile"
-            android:label="profile_fragment_label"
+            android:label="@string/profile_fragment"
             tools:layout="@layout/profile_fragment">
 
     </fragment>

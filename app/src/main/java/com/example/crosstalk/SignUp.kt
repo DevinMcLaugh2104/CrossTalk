@@ -16,6 +16,11 @@ class SignUp : Fragment() {
     private var _binding: SignUpFragmentBinding? = null
     private val binding get() = _binding!!
 
+    private var fullName: String? = null
+    private var userName: String? = null
+    private var password: String? = null
+    private var confirmPassword: String? = null
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?

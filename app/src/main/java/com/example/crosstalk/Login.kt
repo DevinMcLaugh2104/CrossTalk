@@ -14,6 +14,9 @@ class Login : Fragment() {
     private var _binding: LoginFragmentBinding? = null
     private val binding get() = _binding!!
 
+    private var email: String? = null
+    private var password: String? = null
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -29,6 +32,7 @@ class Login : Fragment() {
 
         binding.loginButton.setOnClickListener {
             findNavController().navigate(R.id.action_FirstFragment_to_MainFragment)
+
         }
 
         binding.signupButton.setOnClickListener {
