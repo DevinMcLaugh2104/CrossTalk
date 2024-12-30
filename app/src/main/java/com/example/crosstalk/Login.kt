@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import com.example.crosstalk.databinding.LoginFragmentBinding
 
@@ -13,9 +14,6 @@ class Login : Fragment() {
 
     private var _binding: LoginFragmentBinding? = null
     private val binding get() = _binding!!
-
-    private var email: String? = null
-    private var password: String? = null
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -30,9 +28,16 @@ class Login : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.loginButton.setOnClickListener {
-            findNavController().navigate(R.id.action_FirstFragment_to_MainFragment)
+        val email = binding.emailInput.text.toString()
+        val password = binding.passwordInput.text.toString()
 
+        binding.loginButton.setOnClickListener {
+
+            if (password.length in 8..19) {
+                Toast.makeText(context, "Password must be 8 - 20 characters long", Toast.LENGTH_SHORT).show()
+            }
+
+            findNavController().navigate(R.id.action_FirstFragment_to_MainFragment)
         }
 
         binding.signupButton.setOnClickListener {
